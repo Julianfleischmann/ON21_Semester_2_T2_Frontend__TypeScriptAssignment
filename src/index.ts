@@ -22,3 +22,7 @@
 //   const val = e.target as HTMLInputElement;
 //   console.log(e, val.value);
 // }
+
+import { calcCar } from './calculatorLogic';
+
+console.log (calcCar);
