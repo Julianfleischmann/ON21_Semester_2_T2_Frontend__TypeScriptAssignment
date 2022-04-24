@@ -1,0 +1,38 @@
+:root {
+    --color-primary: #AEF5DA;
+    --color-secondary: #A5ECFA;
+    --color-primary-dark: #92DEAC;
+    --color-primary-light: #eff7f2;
+}
+
+/* Adding some resets */
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: var(--color-primary-light);
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,h2,h3,h4,h6,h6 {
+    margin: 0;
+}
+
+/* Styling the wrapper */
+
+.wrapper {
+    display: block;
+}
+
+.app {
+    margin: 3rem auto;
+    max-width: 80rem;
+    display: flex;
+    background: var(--color-primary);
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.col-6 {
+    flex-grow: 6;
+}
