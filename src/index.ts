@@ -23,6 +23,14 @@
 //   console.log(e, val.value);
 // }
 
+import { getConsumptionInLiter, getDistanceInKm, getPriceInEuro } from './calculatorDomUtils';
 import { calcCar } from './calculatorLogic';
 
-console.log (calcCar);
+function startCalculator() {
+    getConsumptionInLiter.value = "3";
+    getDistanceInKm.value = "10";
+    getPriceInEuro.value = "1";
+    getConsumptionInLiter.addEventListener('input', calcCar);
+}
+
+startCalculator();
