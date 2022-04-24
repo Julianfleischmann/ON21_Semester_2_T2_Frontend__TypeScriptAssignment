@@ -25,16 +25,20 @@
 
 import { priceChart } from './calculatorChart';
 import { getConsumptionInLiter, getCostCarResult, getDistanceInKm, getCarPriceInEuro } from './calculatorDomUtils';
-import { calcCar } from './calculatorLogic';
+import { calcCarOpnv } from './calculatorLogic';
 
 function startCalculator() {
+
+    // adding standard values
     getConsumptionInLiter.value = "3";
     getDistanceInKm.value = "10";
     getCarPriceInEuro.value = "1";
     getCostCarResult.innerHTML = "not set";
-    getConsumptionInLiter.addEventListener('input', calcCar);
-    getDistanceInKm.addEventListener('input', calcCar);
-    getCarPriceInEuro.addEventListener('input', calcCar);
+
+    // Adding event listener
+    getConsumptionInLiter.addEventListener('input', calcCarOpnv);
+    getDistanceInKm.addEventListener('input', calcCarOpnv);
+    getCarPriceInEuro.addEventListener('input', calcCarOpnv);
 
     priceChart.update();
 }
