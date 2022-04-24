@@ -7,7 +7,7 @@ export const priceChart = new Chart (getChart, {
             labels: ["Kosten Auto", "Kosten ÖPNV"], // todo: Variable?
             datasets: [{
                 label: 'Vergleich der Kosten',
-                data: [3, 4], // todo: replace fakedata
+                data: [], // todo: replace fakedata
                 backgroundColor: [
                     'rgba(75, 192, 192, 1)',
                     'rgba(54, 162, 235, 1)'

@@ -1,9 +1,6 @@
 import { updatePriceChart } from './calculatorChart';
 import { getConsumptionInLiter, getDistanceInKm, getCheckTwoTimes, getCarPriceInEuro, getPriceOpnv, getCostCarResult } from './calculatorDomUtils';
 
-export let carResult: number;
-export let opnvResult: number;
-
 export function calcCarOpnv() {
     const comsumptionInLiter = +getConsumptionInLiter.value;
     const distanceInKm = +getDistanceInKm.value;
@@ -11,11 +8,11 @@ export function calcCarOpnv() {
     const priceOpnv = +getPriceOpnv.value;
 
     // Calculate Verbrauch/100 * KilometerDistaz * preisEuro
-    carResult = comsumptionInLiter/100 * distanceInKm * priceInEuro;
+    const carResult: number = comsumptionInLiter/100 * distanceInKm * priceInEuro;
     // Set the Cost to string and write to DOM
     getCostCarResult.innerHTML = carResult.toString();
     
-    
+    const opnvResult: number = priceOpnv;
     
     // Updating the Price Chart
     updatePriceChart(carResult, opnvResult);
