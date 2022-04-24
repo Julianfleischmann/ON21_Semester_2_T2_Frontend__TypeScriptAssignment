@@ -23,6 +23,7 @@
 //   console.log(e, val.value);
 // }
 
+import { priceChart } from './calculatorChart';
 import { getConsumptionInLiter, getCostCarResult, getDistanceInKm, getCarPriceInEuro } from './calculatorDomUtils';
 import { calcCar } from './calculatorLogic';
 
@@ -34,6 +35,8 @@ function startCalculator() {
     getConsumptionInLiter.addEventListener('input', calcCar);
     getDistanceInKm.addEventListener('input', calcCar);
     getCarPriceInEuro.addEventListener('input', calcCar);
+
+    priceChart.update();
 }
 
 startCalculator();
