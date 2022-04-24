@@ -4,9 +4,9 @@ import { getChart } from "./calculatorDomUtils";
 export const priceChart = new Chart (getChart, {
         type: "bar",
         data: {
-            labels: [],
+            labels: ["Kosten Auto", "Kosten ÖPNV"], // todo: Variable?
             datasets: [{
-                label: 'My Data',
+                label: 'Vergleich der Kosten',
                 data: [20, 30], // todo: replace fakedata
                 backgroundColor: [
                     'rgba(75, 192, 192, 1)',
