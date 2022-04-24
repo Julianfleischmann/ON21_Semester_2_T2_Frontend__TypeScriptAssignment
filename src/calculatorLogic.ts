@@ -1,13 +1,14 @@
-import { getConsumptionInLiter, getDistanceInKm, getCheckTwoTimes, getPriceInEuro, getPriceOpnv, getCostCarResult } from './calculatorDomUtils';
+import { getConsumptionInLiter, getDistanceInKm, getCheckTwoTimes, getCarPriceInEuro, getPriceOpnv, getCostCarResult } from './calculatorDomUtils';
 
 
 export function calcCar() {
     const comsumptionInLiter = +getConsumptionInLiter.value;
     const distanceInKm = +getDistanceInKm.value;
-    const priceInEuro = +getPriceInEuro.value;
-    const priceOpnv = +getPriceOpnv.value;
+    const priceInEuro = +getCarPriceInEuro.value;
+    // const priceOpnv = +getPriceOpnv.value;
 
-    getCostCarResult.innerHTML = (comsumptionInLiter + distanceInKm + priceInEuro + priceOpnv).toString();
+    // Verbrauch/100 * KilometerDistaz * preisEuro
+    getCostCarResult.innerHTML = (comsumptionInLiter/100 * distanceInKm * priceInEuro).toString();
 
 }
 
