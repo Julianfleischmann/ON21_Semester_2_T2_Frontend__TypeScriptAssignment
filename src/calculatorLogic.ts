@@ -7,9 +7,7 @@ export function calcCar() {
     const priceInEuro = +getPriceInEuro.value;
     const priceOpnv = +getPriceOpnv.value;
 
-    // getCostCarResult.innerHTML = (comsumptionInLiter + distanceInKm + priceInEuro + priceOpnv).toString();
-    getCostCarResult.innerHTML = comsumptionInLiter.toString();
+    getCostCarResult.innerHTML = (comsumptionInLiter + distanceInKm + priceInEuro + priceOpnv).toString();
 
-    console.log(comsumptionInLiter);
 }
 
