@@ -5,6 +5,8 @@ export const getCarPriceInEuro = document.getElementById('priceInEuro') as HTMLI
 export const getPriceOpnv = document.getElementById('priceOpnv') as HTMLInputElement;
 export const getCostCarResult = document.getElementById('costCarResult') as HTMLElement;
 
+export const getChart = document.getElementById('priceChart') as HTMLCanvasElement;
+
 // export function updateCostCar() {
 //     getCostCarResult!.innerHTML = getCostCarResult;
 // }
