@@ -28,9 +28,9 @@ export function resetChart() {
     });
 }
 
-export function updatePriceChart (carResult: number, opnvResult?: number) {
+export function updatePriceChart (carResult?: number, opnvResult?: number) {
     resetChart();
-    priceChart.data.datasets.forEach((element: any) => {
+    priceChart.data.datasets.forEach((element: any) => { // Type any überdenken!
         element.data.push(carResult, opnvResult);
     });
     priceChart.update();

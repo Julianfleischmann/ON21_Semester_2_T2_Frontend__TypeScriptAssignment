@@ -23,7 +23,7 @@
 //   console.log(e, val.value);
 // }
 
-import { getConsumptionInLiter, getCostCarResult, getDistanceInKm, getCarPriceInEuro, getPriceOpnv, getCostOpnvResult } from './calculatorDomUtils';
+import { getConsumptionInLiter, getCostCarResult, getDistanceInKm, getCarPriceInEuro, getPriceOpnv, getCostOpnvResult, getCarCheckTwoTimes } from './calculatorDomUtils';
 import { calcCarOpnv } from './calculatorLogic';
 
 function startCalculator() {
@@ -43,6 +43,7 @@ function startCalculator() {
     getConsumptionInLiter.addEventListener('input', calcCarOpnv);
     getDistanceInKm.addEventListener('input', calcCarOpnv);
     getCarPriceInEuro.addEventListener('input', calcCarOpnv);
+    getCarCheckTwoTimes.addEventListener('input', calcCarOpnv);
     // ÖPNV
     getPriceOpnv.addEventListener('input', calcCarOpnv);
 }
