@@ -1,5 +1,5 @@
 import { updatePriceChart } from './calculatorChart';
-import { getConsumptionInLiter, getDistanceInKm, getCarCheckTwoTimes, getCarPriceInEuro, getPriceOpnv, getCostCarResult } from './calculatorDomUtils';
+import { getConsumptionInLiter, getDistanceInKm, getCarCheckTwoTimes, getCarPriceInEuro, getPriceOpnv, getCostCarResult, getCostOpnvResult } from './calculatorDomUtils';
 
 export function calcCarOpnv() {
     const comsumptionInLiter = +getConsumptionInLiter.value; // parseInt() the Variable via +Operator;
@@ -19,6 +19,8 @@ export function calcCarOpnv() {
     getCostCarResult.innerHTML = carResult.toString();
     
     const opnvResult: number = priceOpnv;
+    // Set the Cost to string and write to DOM
+    getCostOpnvResult.innerHTML = opnvResult.toString();
     
     // Updating the Price Chart
     updatePriceChart(carResult, opnvResult);
