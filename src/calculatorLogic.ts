@@ -3,14 +3,14 @@ import { getConsumptionInLiter, getDistanceInKm, getCarCheckTwoTimes, getCarPric
 
 export function calcCarOpnv() {
     const comsumptionInLiter = +getConsumptionInLiter.value; // parseInt() the Variable via +Operator;
-    const distanceInKm = +getDistanceInKm.value;
-    let priceInEuro = +getCarPriceInEuro.value;
+    let distanceInKm = +getDistanceInKm.value;
+    const priceInEuro = +getCarPriceInEuro.value;
     const carCheckTwoTimes = getCarCheckTwoTimes.checked;
 
     const priceOpnv = +getPriceOpnv.value;
     
     if (carCheckTwoTimes == true) {
-        priceInEuro = priceInEuro*2;
+        distanceInKm = distanceInKm*2;
     }
 
     // Calculate Verbrauch/100 * KilometerDistaz * preisEuro
