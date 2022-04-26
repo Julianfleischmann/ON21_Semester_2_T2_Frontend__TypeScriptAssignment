@@ -1,8 +1,10 @@
 :root {
-    --color-primary: #AEF5DA;
-    --color-secondary: #A5ECFA;
-    --color-primary-dark: #92DEAC;
-    --color-primary-light: #eff7f2;
+    --color-primary: #3a9691;
+    --color-secondary: #3a9691;
+    --color-background: #fff;
+    --color-background-app: #f9f9f9;
+    --color-background-dark: #1e3932;
+    --color-shadow: #ccc;
 }
 
 /* Adding some resets */
@@ -10,12 +12,24 @@ body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    background-color: var(--color-primary-light);
+    background-color: var(--color-background);
     font-family: 'Open Sans', sans-serif;
+    font-size: 1.125rem;
 }
 
 h1,h2,h3,h4,h6,h6 {
     margin: 0;
+}
+h1 {
+    font-size: 2.5rem;
+}
+
+.app-title-background {
+    background: var(--color-background-dark);
+    padding: 5rem 0 8rem 0;
+    color: white;
+    text-align: center;
+    margin-bottom: -5rem;
 }
 
 /* Styling the wrapper */
@@ -29,9 +43,10 @@ h1,h2,h3,h4,h6,h6 {
     max-width: 80rem;
     display: flex;
     flex-wrap: wrap;
-    background: var(--color-primary);
+    background: var(--color-background-app);
     border-radius: 1rem;
     padding: 1.5rem;
+    box-shadow:  0 .1rem .1rem 0 var(--color-shadow);
 }
 
 .col-6 {
