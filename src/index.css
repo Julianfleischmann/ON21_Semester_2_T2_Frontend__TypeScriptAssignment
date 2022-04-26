@@ -28,6 +28,28 @@ h2 {
     margin-bottom: .5rem;
 }
 
+input[type=number] {
+    font-size: 1.2rem;
+    border: none;
+    border-bottom: 2px solid var(--color-shadow);
+    background: none;
+    width: 5rem;
+    margin-left: 1rem;
+    transition: .3s width ease-in-out;
+}
+
+input[type=number]:focus {
+    border-bottom: 2px solid var(--color-primary);
+}
+input[type=number]:focus-visible {
+    outline: none;
+}
+
+input[type=checkbox] {
+    background-color: var(--color-primary);
+}
+
+
 .calculation-col {
     flex-grow: 6;
     padding: 1.5rem 2rem;
