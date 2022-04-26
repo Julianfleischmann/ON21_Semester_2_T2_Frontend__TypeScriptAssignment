@@ -23,7 +23,7 @@
 
     <div class="wrapper">
         <div class="app">
-            <div class="col-6">
+            <div class="calculation-col">
                 <h2>Auto</h2>
                 <div>
                     <div class="formgroup">
@@ -42,11 +42,13 @@
                         <label for="priceInEuro">Preis je Liter in EURO</label>
                         <input type="number" id="priceInEuro" />
                     </div>
-                    <h3>Gesamtkosten</h3>
-                    <span id="costCarResult">000</span>
+                    <div class="result-wrapper">
+                        <h3>Gesamtkosten</h3>
+                        <span id="costCarResult">000</span>
+                    </div>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="calculation-col">
                 <h2>ÖPNV</h2>
                 <div>
                     <div class="formgroup">
@@ -54,8 +56,10 @@
                         <input type="number" name="" id="priceOpnv" />
                     </div>
                 </div>
-                <h3>Gesamtkosten</h3>
-                <span id="costOpnvResult">000</span>
+                <div class="result-wrapper">
+                    <h3>Gesamtkosten</h3>
+                    <span id="costOpnvResult">000</span>
+                </div>
             </div>
 
             <canvas id="priceChart"></canvas>            
