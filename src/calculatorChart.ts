@@ -9,12 +9,12 @@ export const priceChart = new Chart (getChart, {
                 label: 'Vergleich der Kosten',
                 data: [], // todo: replace fakedata
                 backgroundColor: [
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(54, 162, 235, 1)'
+                    '#3a9691',
+                    '#1e3932'
                 ],
                 borderColor: [
-                    'rgb(75, 192, 192)',
-                    'rgb(54, 162, 235)'
+                    '#3a9691',
+                    '#1e3932'
                 ],
                 borderWidth: 1
             }]
