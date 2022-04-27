@@ -1,0 +1,105 @@
+:root {
+    --color-primary: #3a9691;
+    --color-secondary: #3a9691;
+    --color-background: #fff;
+    --color-background-app: #f9f9f9;
+    --color-background-dark: #1e3932;
+    --color-shadow: #ccc;
+}
+
+/* Adding some resets */
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: var(--color-background);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.125rem;
+}
+
+h1,h2,h3,h4,h6,h6 {
+    margin: 0;
+}
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    margin-bottom: .5rem;
+}
+
+input[type=number] {
+    font-size: 1.2rem;
+    border: none;
+    border-bottom: 2px solid var(--color-shadow);
+    background: none;
+    width: 5rem;
+    margin-left: 1rem;
+    transition: .3s width ease-in-out;
+}
+
+input[type=number]:focus {
+    border-bottom: 2px solid var(--color-primary);
+}
+input[type=number]:focus-visible {
+    outline: none;
+}
+
+input[type=checkbox] {
+    appearance: none;
+}
+
+input[type=checkbox]::before {
+    border: 2px solid var(--color-primary);
+    border-radius: 5px;
+    width: 1rem;
+    height: 1rem;
+    top: 0.375rem;
+    content: "";
+    display: block;
+    position: relative;
+}
+
+input[type=checkbox]:checked::before {
+    background-color: var(--color-background-dark);
+}
+
+
+.calculation-col {
+    flex-grow: 6;
+    padding: 1.5rem 2rem;
+}
+
+.app-title-background {
+    background: var(--color-background-dark);
+    padding: 5rem 0 8rem 0;
+    color: white;
+    text-align: center;
+    margin-bottom: -8rem;
+}
+
+/* Styling the wrapper */
+
+.wrapper {
+    display: block;
+}
+
+.app {
+    margin: 3rem auto;
+    max-width: 80rem;
+    display: flex;
+    flex-wrap: wrap;
+    background: var(--color-background-app);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow:  0 .1rem .1rem 0 var(--color-shadow);
+}
+
+.formgroup {
+    margin-bottom: .75rem;
+}
+/* 
+.result-wrapper {
+    position: absolute;
+    bottom: 0;
+} */
