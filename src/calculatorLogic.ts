@@ -2,12 +2,12 @@ import { updatePriceChart } from './calculatorChart';
 import { getConsumptionInLiter, getDistanceInKm, getCarCheckTwoTimes, getCarPriceInEuro, getPriceOpnv, getCostCarResult, getCostOpnvResult } from './calculatorDomUtils';
 
 export function calcCarOpnv() {
-    const comsumptionInLiter = +getConsumptionInLiter.value; // parseInt() the Variable via +Operator;
-    let distanceInKm = +getDistanceInKm.value;
-    const priceInEuro = +getCarPriceInEuro.value;
-    const carCheckTwoTimes = getCarCheckTwoTimes.checked;
+    const comsumptionInLiter: number = +getConsumptionInLiter.value; // parseInt() the Variable via +Operator;
+    let distanceInKm: number = +getDistanceInKm.value;
+    const priceInEuro: number = +getCarPriceInEuro.value;
+    const carCheckTwoTimes: boolean = getCarCheckTwoTimes.checked;
 
-    const priceOpnv = +getPriceOpnv.value;
+    const priceOpnv: number = +getPriceOpnv.value;
     
     if (carCheckTwoTimes == true) {
         distanceInKm = distanceInKm*2;
