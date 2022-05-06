@@ -1,25 +1,25 @@
 //THIS IS THE ENTRY FILE - WRITE YOUR MAIN LOGIC HERE!
 
-import { getConsumptionInLiter, getCostCarResult, getDistanceInKm, getCarPriceInEuro, getPriceOpnv, getCostOpnvResult, getCarCheckTwoTimes } from './calculatorDomUtils';
+import { getCarConsumptionInLiter, getCarCostResult, getCarDistanceInKm, getCarPriceLiterInEuro, getPriceOpnv, getCostOpnvResult, getCarCheckTwoTimes } from './calculatorDomUtils';
 import { calcCarOpnv } from './calculatorLogic';
 
 function startCalculator() {
 
     // adding standard values
     // input fields
-    getConsumptionInLiter.value = "3";
-    getDistanceInKm.value = "10";
-    getCarPriceInEuro.value = "2";
+    getCarConsumptionInLiter.value = "3";
+    getCarDistanceInKm.value = "10";
+    getCarPriceLiterInEuro.value = "2";
     getPriceOpnv.value = "5";
     // results
-    getCostCarResult.innerHTML = "not set";
+    getCarCostResult.innerHTML = "not set";
     getCostOpnvResult.innerHTML = "not set";
 
     // Adding event listener
     // car
-    getConsumptionInLiter.addEventListener('input', calcCarOpnv);
-    getDistanceInKm.addEventListener('input', calcCarOpnv);
-    getCarPriceInEuro.addEventListener('input', calcCarOpnv);
+    getCarConsumptionInLiter.addEventListener('input', calcCarOpnv);
+    getCarDistanceInKm.addEventListener('input', calcCarOpnv);
+    getCarPriceLiterInEuro.addEventListener('input', calcCarOpnv);
     getCarCheckTwoTimes.addEventListener('input', calcCarOpnv);
     // ÖPNV
     getPriceOpnv.addEventListener('input', calcCarOpnv);
