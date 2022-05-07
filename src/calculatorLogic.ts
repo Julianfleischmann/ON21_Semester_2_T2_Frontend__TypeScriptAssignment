@@ -5,7 +5,7 @@ export function calcCarOpnv() {
     // Car Variables
     const carComsumptionInLiter: number = +getCarConsumptionInLiter.value; // parseInt() the Variable via +Operator;
     let carDistanceInKm: number = +getCarDistanceInKm.value;
-    const carPriceInEuro: number = +getCarPriceLiterInEuro.value;
+    const carPriceLiterInEuro: number = +getCarPriceLiterInEuro.value;
     const carCheckTwoTimes: boolean = getCarCheckTwoTimes.checked;
 
     /**
@@ -31,7 +31,7 @@ export function calcCarOpnv() {
     }
 
     // Calculate Verbrauch/100 * KilometerDistaz * preisEuro
-    const carResult: number = carComsumptionInLiter / 100 * carDistanceInKm * carPriceInEuro;
+    const carResult: number = carComsumptionInLiter / 100 * carDistanceInKm * carPriceLiterInEuro;
 
     // Set the Cost, Reound it, parse to string and write to DOM
     getCarCostResult.innerHTML = carResult.toFixed(2).toString() + "€";
