@@ -1,4 +1,4 @@
-import Chart from "chart.js/auto";
+import Chart, { ChartDataset } from "chart.js/auto";
 import { getChart } from "./calculatorDomUtils";
 
 export const priceChart = new Chart (getChart, {
@@ -24,14 +24,14 @@ export const priceChart = new Chart (getChart, {
 
 // Setzt das Chart, den Array zurück (sonst würden die Werte immer addiert werden)
 export function resetChart() {
-    priceChart.data.datasets.forEach((element: any) => { // Todo: Any prüfen
+    priceChart.data.datasets.forEach((element: ChartDataset) => { // Todo: Any prüfen
         element.data = [];
     });
 }
 
 export function updatePriceChart (carResult: number, opnvResult: number) {
     resetChart();
-    priceChart.data.datasets.forEach((element: any) => { // Todo: Any prüfen
+    priceChart.data.datasets.forEach((element: ChartDataset) => { // Todo: Any prüfen: siehe: https://www.chartjs.org/docs/latest/api/#chartdataset
         element.data.push(carResult, opnvResult);
     });
     priceChart.update();
