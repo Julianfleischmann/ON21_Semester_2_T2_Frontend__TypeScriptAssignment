@@ -1,27 +1,59 @@
 import { updatePriceChart } from './calculatorChart';
-import { getCarConsumptionInLiter, getCarDistanceInKm, getCarCheckTwoTimes, getCarPriceLiterInEuro, getPriceOpnv, getCarCostResult, getCostOpnvResult } from './calculatorDomUtils';
+import { getCarConsumptionInLiter, getCarDistanceInKm, getCarCheckTwoTimes, getCarPriceLiterInEuro, getOpnvPrice, getCarCostResult, getOpnvCostResult, getOpnvDiscount } from './calculatorDomUtils';
 
 export function calcCarOpnv() {
-    const comsumptionInLiter: number = +getCarConsumptionInLiter.value; // parseInt() the Variable via +Operator;
-    let distanceInKm: number = +getCarDistanceInKm.value;
-    const priceInEuro: number = +getCarPriceLiterInEuro.value;
+    // Car Variables
+    const carComsumptionInLiter: number = +getCarConsumptionInLiter.value; // parseInt() the Variable via +Operator;
+    let carDistanceInKm: number = +getCarDistanceInKm.value;
+    const carPriceInEuro: number = +getCarPriceLiterInEuro.value;
     const carCheckTwoTimes: boolean = getCarCheckTwoTimes.checked;
 
-    const priceOpnv: number = +getPriceOpnv.value;
-    
+    /**
+     * ÖPNV-Variable parsed as Number
+     */
+    let opnvPrice: number = +getOpnvPrice.value;
+    /**
+     * ÖPNV-Discount parsed as Number
+     */
+    const opnvDiscount: number = +getOpnvDiscount.value;
+
+    /*************
+     * Car logic *
+    **************/
+
+    // Way back will be calculated, when checkbox is checked
     if (carCheckTwoTimes == true) {
-        distanceInKm = distanceInKm*2;
+        carDistanceInKm = carDistanceInKm * 2;
     }
 
     // Calculate Verbrauch/100 * KilometerDistaz * preisEuro
-    const carResult: number = comsumptionInLiter/100 * distanceInKm * priceInEuro;
+    const carResult: number = carComsumptionInLiter / 100 * carDistanceInKm * carPriceInEuro;
+
     // Set the Cost to string and write to DOM
     getCarCostResult.innerHTML = carResult.toString();
+
+
+    /***************
+     * ÖPNV logic *
+     ***************/
     
-    const opnvResult: number = priceOpnv;
+    // Wenn der Rabatt > 0 dann rechne (100-X) * P / 100
+
+    if (opnvDiscount >= 0.01) {
+        opnvPrice = (100 - opnvDiscount) * opnvPrice / 100;
+    }
+
+    // Setting up a variable and assign the Price to it
+    const opnvResult: number = opnvPrice;
+
     // Set the Cost to string and write to DOM
-    getCostOpnvResult.innerHTML = opnvResult.toString();
-    
+    getOpnvCostResult.innerHTML = opnvResult.toString();
+
+
+    /****************
+     * finish logic *
+     ****************/
+
     // Updating the Price Chart
     updatePriceChart(carResult, opnvResult);
 }

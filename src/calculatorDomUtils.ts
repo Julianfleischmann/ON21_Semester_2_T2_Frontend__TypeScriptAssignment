@@ -31,14 +31,19 @@ export const getCarCostResult = document.getElementById('carCostResult') as HTML
 
 /**
  * ÖPNV variables
- * input fields
+ * input the ÖPNV price as number
  */
-export const getPriceOpnv = document.getElementById('opnvPrice') as HTMLInputElement;
+export const getOpnvPrice = document.getElementById('opnvPrice') as HTMLInputElement;
+/**
+ * ÖPNV variables
+ * input field for discounts
+ */
+export const getOpnvDiscount = document.getElementById('opnvDiscount') as HTMLInputElement;
 /**
  * ÖPNV variables
  * result output
  */
-export const getCostOpnvResult = document.getElementById('opnvCostResult') as HTMLElement;
+export const getOpnvCostResult = document.getElementById('opnvCostResult') as HTMLElement;
 
 
 // Start Canvas Element
