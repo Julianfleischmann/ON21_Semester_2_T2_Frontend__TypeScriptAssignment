@@ -1,6 +1,6 @@
 //THIS IS THE ENTRY FILE - WRITE YOUR MAIN LOGIC HERE!
 
-import { getCarConsumptionInLiter, getCarDistanceInKm, getCarPriceLiterInEuro, getOpnvPrice, getCarCheckTwoTimes, getOpnvDiscount } from './calculatorDomUtils';
+import { getCarConsumptionInLiter, getCarDistanceInKm, getCarPriceLiterInEuro, getOpnvPrice, getCarCheckTwoTimes, getOpnvDiscount, getOpnvCheckTwoTimes } from './calculatorDomUtils';
 import { calcCarOpnv } from './calculatorLogic';
 
 function startCalculator() {
@@ -60,6 +60,10 @@ function startCalculator() {
      * input listener for ÖPNV Field discount
      */
     getOpnvDiscount.addEventListener('input', calcCarOpnv);
+    /**
+     * input listener for ÖPNV Field check two times
+     */
+    getOpnvCheckTwoTimes.addEventListener('input', calcCarOpnv);
 }
 
 /**

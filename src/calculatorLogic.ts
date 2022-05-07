@@ -1,5 +1,5 @@
 import { updatePriceChart } from './calculatorChart';
-import { getCarConsumptionInLiter, getCarDistanceInKm, getCarCheckTwoTimes, getCarPriceLiterInEuro, getOpnvPrice, getCarCostResult, getOpnvCostResult, getOpnvDiscount, getOpnvDiscountWarning, getResultInformation } from './calculatorDomUtils';
+import { getCarConsumptionInLiter, getCarDistanceInKm, getCarCheckTwoTimes, getCarPriceLiterInEuro, getOpnvPrice, getCarCostResult, getOpnvCostResult, getOpnvDiscount, getOpnvDiscountWarning, getResultInformation, getOpnvCheckTwoTimes } from './calculatorDomUtils';
 
 export function calcCarOpnv() {
     // Car Variables
@@ -16,13 +16,17 @@ export function calcCarOpnv() {
      * ÖPNV-Discount parsed as Number
      */
     const opnvDiscount: number = +getOpnvDiscount.value;
+    /**
+     * get the boolean value of the DOM element getOpnvCheckTwoTimes
+     */
+    const opnvCheckedTwoTimes: boolean = getOpnvCheckTwoTimes.checked;
 
     /*************
      * Car logic *
     **************/
 
     // Way back will be calculated, when checkbox is checked
-    if (carCheckTwoTimes == true) {
+    if (carCheckTwoTimes) {
         carDistanceInKm = carDistanceInKm * 2;
     }
 
@@ -37,10 +41,14 @@ export function calcCarOpnv() {
      * ÖPNV logic *
      **************/
     
-    // Wenn der Rabatt > 0 dann rechne (100-X) * P / 100
-    // Prüft auch, ob der Wert in der richtigen Range liegt.
+    // Checks if way back is checked
+    if (opnvCheckedTwoTimes) {
+        opnvPrice = opnvPrice * 2;
+    }
 
-    // Check the Values between 0 and 100
+
+    // Validation Check the Values between 0 and 100
+    // Wenn der Rabatt > 0 dann rechne (100-X) * P / 100
     if (opnvDiscount > 100 || opnvDiscount < 0) {        
         getOpnvDiscountWarning.classList.replace('display-none', 'display-block');
     } else {

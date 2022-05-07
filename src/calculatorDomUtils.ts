@@ -40,6 +40,11 @@ export const getOpnvDiscountWarning = document.getElementById('opnvDiscountWarni
 export const getOpnvPrice = document.getElementById('opnvPrice') as HTMLInputElement;
 /**
  * ÖPNV variables
+ * input the ÖPNV – boollean way back
+ */
+export const getOpnvCheckTwoTimes = document.getElementById('opnvCheckTwoTimes') as HTMLB;
+/**
+ * ÖPNV variables
  * input field for discounts
  */
 export const getOpnvDiscount = document.getElementById('opnvDiscount') as HTMLInputElement;
