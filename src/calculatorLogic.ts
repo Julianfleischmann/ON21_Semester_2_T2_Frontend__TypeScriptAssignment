@@ -20,6 +20,7 @@ export function calcCarOpnv() {
      */
     const carCheckTwoTimes: boolean = getCarCheckTwoTimes.checked;
 
+    // ÖPNV Variables
     /**
      * ÖPNV-Variable parsed as Number
      */
