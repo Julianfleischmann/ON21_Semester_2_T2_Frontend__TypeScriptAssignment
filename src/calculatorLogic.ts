@@ -29,8 +29,8 @@ export function calcCarOpnv() {
     // Calculate Verbrauch/100 * KilometerDistaz * preisEuro
     const carResult: number = carComsumptionInLiter / 100 * carDistanceInKm * carPriceInEuro;
 
-    // Set the Cost to string and write to DOM
-    getCarCostResult.innerHTML = carResult.toString();
+    // Set the Cost, Reound it, parse to string and write to DOM
+    getCarCostResult.innerHTML = carResult.toFixed(2).toString() + "€";
 
 
     /**************
@@ -52,8 +52,8 @@ export function calcCarOpnv() {
     // Setting up a variable and assign the Price to it
     const opnvResult: number = opnvPrice;
 
-    // Set the Cost to string and write to DOM
-    getOpnvCostResult.innerHTML = opnvResult.toString();
+    // Set the Cost, Reound it, parse to string and write to DOM
+    getOpnvCostResult.innerHTML = opnvResult.toFixed(2).toString() + "€";
 
 
     /****************
