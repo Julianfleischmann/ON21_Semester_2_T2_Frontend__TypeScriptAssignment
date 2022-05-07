@@ -1,5 +1,5 @@
 import { updatePriceChart } from './calculatorChart';
-import { getCarConsumptionInLiter, getCarDistanceInKm, getCarCheckTwoTimes, getCarPriceLiterInEuro, getOpnvPrice, getCarCostResult, getOpnvCostResult, getOpnvDiscount, getOpnvDiscountWarning } from './calculatorDomUtils';
+import { getCarConsumptionInLiter, getCarDistanceInKm, getCarCheckTwoTimes, getCarPriceLiterInEuro, getOpnvPrice, getCarCostResult, getOpnvCostResult, getOpnvDiscount, getOpnvDiscountWarning, getResultInformation } from './calculatorDomUtils';
 
 export function calcCarOpnv() {
     // Car Variables
@@ -59,6 +59,21 @@ export function calcCarOpnv() {
     /****************
      * finish logic *
      ****************/
+
+    // Calculate the difference
+    const difference: number = Math.abs(opnvResult - carResult);
+
+    // Updating the result Information
+    if (opnvResult > carResult) {
+        // Auto günstiger
+        getResultInformation.innerHTML = `Das <strong>Auto</strong> ist ${difference.toFixed(2)}€ günstiger!`;
+    } else if (opnvResult < carResult) {
+        // ÖPNV günstiger
+        getResultInformation.innerHTML = `Der <strong>ÖPNV</strong> ist ${difference.toFixed(2)}€ günstiger!`;
+    } else {
+        // Beide gleich teuer
+        getResultInformation.innerHTML = "Beide sind gleich günstig!";
+    }
 
     // Updating the Price Chart
     updatePriceChart(carResult, opnvResult);

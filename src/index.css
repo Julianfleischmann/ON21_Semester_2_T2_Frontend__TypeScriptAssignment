@@ -70,6 +70,12 @@ input[type=checkbox]:checked::before {
     padding: 1.5rem 2rem;
 }
 
+.result-col {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    text-align: center;
+}
+
 .app-title-background {
     background: var(--color-background-dark);
     padding: 5rem 0 8rem 0;

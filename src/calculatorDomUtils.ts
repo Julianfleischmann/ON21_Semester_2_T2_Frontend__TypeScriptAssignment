@@ -1,5 +1,7 @@
 // Start Variables for Car
 
+import exp from "constants";
+
 /**
  * Car variable
  * input field – consumption
@@ -49,6 +51,13 @@ export const getOpnvDiscount = document.getElementById('opnvDiscount') as HTMLIn
  */
 export const getOpnvCostResult = document.getElementById('opnvCostResult') as HTMLElement;
 
+
+// Start result information
+/**
+ * Result
+ * get the element what is cheaper?
+ */
+export const getResultInformation = document.getElementById('resultInformation') as HTMLElement;
 
 // Start Canvas Element
 

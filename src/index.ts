@@ -13,8 +13,8 @@ function startCalculator() {
     getOpnvPrice.value = "5";
     getOpnvDiscount.value = "0";
     // results
-    getCarCostResult.innerHTML = "not set";
-    getOpnvCostResult.innerHTML = "not set";
+    getCarCostResult.innerHTML = "nicht berechnet";
+    getOpnvCostResult.innerHTML = "nicht berechnet";
 
     // Adding event listener
     // car
