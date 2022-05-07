@@ -50,9 +50,9 @@ export function calcCarOpnv() {
     // Validation Check the Values between 0 and 100
     // Wenn der Rabatt > 0 dann rechne (100-X) * P / 100
     if (opnvDiscount > 100 || opnvDiscount < 0) {        
-        getOpnvDiscountWarning.classList.replace('display-none', 'display-block');
+        getOpnvDiscountWarning.classList.replace('display-none', 'display-inline-block');
     } else {
-        getOpnvDiscountWarning.classList.replace('display-block', 'display-none');
+        getOpnvDiscountWarning.classList.replace('display-inline-block', 'display-none');
         opnvPrice = (100 - opnvDiscount) * opnvPrice / 100;
     }
 

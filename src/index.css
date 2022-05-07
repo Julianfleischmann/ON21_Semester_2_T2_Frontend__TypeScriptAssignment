@@ -108,8 +108,13 @@ input[type=checkbox]:checked::before {
 .display-none {
     display: none;
 }
-.display-block {
-    display: block;
+.display-inline-block {
+    display: inline-block;
+}
+
+.warning {
+    font-weight: bold;
+    color: #DC143C;
 }
 
 /* 
