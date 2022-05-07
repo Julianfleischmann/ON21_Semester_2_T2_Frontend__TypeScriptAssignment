@@ -13,16 +13,17 @@
 </head>
 
 <body>
-    <!-- <my-beispiel></my-beispiel>
-    <input type="text" id="myInput" /> -->
 
+    <!-- Headline -->
     <div class="app-title-background">
         <h1>Preisvergleich zwischen Verkehrsmitteln</h1>
     </div>
     
 
     <div class="wrapper">
+        <!-- Application -->
         <div class="app">
+            <!-- Car column -->
             <div class="calculation-col">
                 <h2>Auto</h2>
                 <div>
@@ -44,10 +45,11 @@
                     </div>
                     <div class="result-wrapper">
                         <h3>Gesamtkosten</h3>
-                        <span id="carCostResult">000</span>
+                        <span id="carCostResult">nicht berechnet</span>
                     </div>
                 </div>
             </div>
+            <!-- ÖPNV column -->
             <div class="calculation-col">
                 <h2>ÖPNV</h2>
                 <div>
@@ -63,14 +65,16 @@
                 </div>
                 <div class="result-wrapper">
                     <h3>Gesamtkosten</h3>
-                    <span id="opnvCostResult">000</span>
+                    <span id="opnvCostResult">nicht berechnet</span>
                 </div>
             </div>
-
+            <!-- Result -->
             <div class="result-col">
                 <h3>Was lohnt sich nun?</h3>
                 <p id="resultInformation"></p>
             </div>
+
+            <!-- Chart -->
             <canvas id="priceChart"></canvas>            
         </div>
     </div>

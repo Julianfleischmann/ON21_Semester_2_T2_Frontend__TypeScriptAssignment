@@ -1,7 +1,5 @@
 // Start Variables for Car
 
-import exp from "constants";
-
 /**
  * Car variable
  * input field – consumption

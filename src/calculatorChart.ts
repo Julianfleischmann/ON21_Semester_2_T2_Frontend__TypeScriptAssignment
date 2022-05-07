@@ -4,7 +4,7 @@ import { getChart } from "./calculatorDomUtils";
 export const priceChart = new Chart (getChart, {
         type: "bar",
         data: {
-            labels: ["Kosten Auto", "Kosten ÖPNV"], // todo: Variable?
+            labels: ["Kosten Auto", "Kosten ÖPNV"],
             datasets: [{
                 label: 'Vergleich der Kosten',
                 data: [],
@@ -31,19 +31,8 @@ export function resetChart() {
 
 export function updatePriceChart (carResult: number, opnvResult: number) {
     resetChart();
-    priceChart.data.datasets.forEach((element: ChartDataset) => { // Todo: Any prüfen: siehe: https://www.chartjs.org/docs/latest/api/#chartdataset
+    priceChart.data.datasets.forEach((element: ChartDataset) => { // Interface von Chart.js siehe: https://www.chartjs.org/docs/latest/api/#chartdataset
         element.data.push(carResult, opnvResult);
     });
     priceChart.update();
 }
-
-
-
-// aktuell nicht in Benutzung
-// interface datasetElement {
-//     label: string,
-//     data: Array<number>,
-//     // backgroundColor: Array<Color>, // https://www.chartjs.org/docs/latest/api/#color
-//     // borderColor: Array<Color>, // https://www.chartjs.org/docs/latest/api/#color
-//     // borderWidth: number | { top?: number, right?: number, bottom?: number, left?: number }; // https://www.chartjs.org/docs/latest/api/interfaces/BarOptions.html#borderwidth
-// }

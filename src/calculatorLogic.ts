@@ -43,7 +43,6 @@ export function calcCarOpnv() {
     // Check the Values between 0 and 100
     if (opnvDiscount > 100 || opnvDiscount < 0) {        
         getOpnvDiscountWarning.classList.replace('display-none', 'display-block');
-        // getOpnvDiscount.value = "0";
     } else {
         getOpnvDiscountWarning.classList.replace('display-block', 'display-none');
         opnvPrice = (100 - opnvDiscount) * opnvPrice / 100;
