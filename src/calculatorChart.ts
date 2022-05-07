@@ -24,7 +24,7 @@ export const priceChart = new Chart (getChart, {
 
 // Setzt das Chart, den Array zurück (sonst würden die Werte immer addiert werden)
 export function resetChart() {
-    priceChart.data.datasets.forEach((element: ChartDataset) => { // Todo: Any prüfen
+    priceChart.data.datasets.forEach((element: ChartDataset) => { // Interface von Chart.js siehe: https://www.chartjs.org/docs/latest/api/#chartdataset
         element.data = [];
     });
 }

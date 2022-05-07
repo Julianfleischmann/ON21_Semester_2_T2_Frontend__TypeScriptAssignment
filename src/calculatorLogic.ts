@@ -3,9 +3,21 @@ import { getCarConsumptionInLiter, getCarDistanceInKm, getCarCheckTwoTimes, getC
 
 export function calcCarOpnv() {
     // Car Variables
+    /**
+     * car Consumption parsed as Number
+     */
     const carComsumptionInLiter: number = +getCarConsumptionInLiter.value; // parseInt() the Variable via +Operator;
+    /**
+     * car distance parsed as Number
+     */
     let carDistanceInKm: number = +getCarDistanceInKm.value;
+    /**
+     * car price liter parsed as Number
+     */
     const carPriceLiterInEuro: number = +getCarPriceLiterInEuro.value;
+    /**
+     * car Consumption parsed as boolean
+     */
     const carCheckTwoTimes: boolean = getCarCheckTwoTimes.checked;
 
     /**
