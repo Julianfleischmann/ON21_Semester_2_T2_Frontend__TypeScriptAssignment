@@ -1,5 +1,5 @@
 import { updatePriceChart } from './calculatorChart';
-import { getCarConsumptionInLiter, getCarDistanceInKm, getCarCheckTwoTimes, getCarPriceLiterInEuro, getOpnvPrice, getCarCostResult, getOpnvCostResult, getOpnvDiscount } from './calculatorDomUtils';
+import { getCarConsumptionInLiter, getCarDistanceInKm, getCarCheckTwoTimes, getCarPriceLiterInEuro, getOpnvPrice, getCarCostResult, getOpnvCostResult, getOpnvDiscount, getOpnvDiscountWarning } from './calculatorDomUtils';
 
 export function calcCarOpnv() {
     // Car Variables
@@ -33,13 +33,19 @@ export function calcCarOpnv() {
     getCarCostResult.innerHTML = carResult.toString();
 
 
-    /***************
+    /**************
      * ÖPNV logic *
-     ***************/
+     **************/
     
     // Wenn der Rabatt > 0 dann rechne (100-X) * P / 100
+    // Prüft auch, ob der Wert in der richtigen Range liegt.
 
-    if (opnvDiscount >= 0.01) {
+    // Check the Values between 0 and 100
+    if (opnvDiscount > 100 || opnvDiscount < 0) {        
+        getOpnvDiscountWarning.classList.replace('display-none', 'display-block');
+        // getOpnvDiscount.value = "0";
+    } else {
+        getOpnvDiscountWarning.classList.replace('display-block', 'display-none');
         opnvPrice = (100 - opnvDiscount) * opnvPrice / 100;
     }
 

@@ -98,6 +98,14 @@ input[type=checkbox]:checked::before {
 .formgroup {
     margin-bottom: .75rem;
 }
+
+.display-none {
+    display: none;
+}
+.display-block {
+    display: block;
+}
+
 /* 
 .result-wrapper {
     position: absolute;

@@ -56,8 +56,9 @@
                         <input type="number" name="opnvPrice" id="opnvPrice" />
                     </div>
                     <div class="formgroup">
-                        <label for="priceOpnv">Rabatt</label>
-                        <input type="number" name="opnvDiscount" id="opnvDiscount" />
+                        <label for="priceOpnv">Rabatt in %</label>
+                        <input type="number" min="0" max="100" name="opnvDiscount" id="opnvDiscount" />
+                        <p id="opnvDiscountWarning" class="display-none">Prüfe Deinen Wert!</p>
                     </div>
                 </div>
                 <div class="result-wrapper">

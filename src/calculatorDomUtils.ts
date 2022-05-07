@@ -28,7 +28,11 @@ export const getCarCostResult = document.getElementById('carCostResult') as HTML
 
 
 // Start Variables for ÖPNV
-
+/**
+ * ÖPNV variables
+ * get the warning paragraph
+ */
+export const getOpnvDiscountWarning = document.getElementById('opnvDiscountWarning') as HTMLElement;
 /**
  * ÖPNV variables
  * input the ÖPNV price as number
