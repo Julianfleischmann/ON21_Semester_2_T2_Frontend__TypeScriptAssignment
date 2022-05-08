@@ -70,6 +70,12 @@ input[type=checkbox]:checked::before {
     padding: 1.5rem 2rem;
 }
 
+.result-col {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    text-align: center;
+}
+
 .app-title-background {
     background: var(--color-background-dark);
     padding: 5rem 0 8rem 0;
@@ -98,6 +104,19 @@ input[type=checkbox]:checked::before {
 .formgroup {
     margin-bottom: .75rem;
 }
+
+.display-none {
+    display: none;
+}
+.display-inline-block {
+    display: inline-block;
+}
+
+.warning {
+    font-weight: bold;
+    color: #DC143C;
+}
+
 /* 
 .result-wrapper {
     position: absolute;

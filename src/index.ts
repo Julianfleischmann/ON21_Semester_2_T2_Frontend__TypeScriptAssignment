@@ -1,28 +1,72 @@
 //THIS IS THE ENTRY FILE - WRITE YOUR MAIN LOGIC HERE!
 
-import { getConsumptionInLiter, getCostCarResult, getDistanceInKm, getCarPriceInEuro, getPriceOpnv, getCostOpnvResult, getCarCheckTwoTimes } from './calculatorDomUtils';
+import { getCarConsumptionInLiter, getCarDistanceInKm, getCarPriceLiterInEuro, getOpnvPrice, getCarCheckTwoTimes, getOpnvDiscount, getOpnvCheckTwoTimes } from './calculatorDomUtils';
 import { calcCarOpnv } from './calculatorLogic';
 
 function startCalculator() {
 
-    // adding standard values
+    /**************************
+     * adding standard values *
+     **************************/
     // input fields
-    getConsumptionInLiter.value = "3";
-    getDistanceInKm.value = "10";
-    getCarPriceInEuro.value = "2";
-    getPriceOpnv.value = "5";
-    // results
-    getCostCarResult.innerHTML = "not set";
-    getCostOpnvResult.innerHTML = "not set";
+    /**
+     * set consumption dafault
+     */
+    getCarConsumptionInLiter.value = "3";
+    /**
+     * set distance default
+     */
+    getCarDistanceInKm.value = "10";
+    /**
+     * set price in liter default
+     */
+    getCarPriceLiterInEuro.value = "2";
+    /**
+     * set OPNV price default
+     */
+    getOpnvPrice.value = "5";
+    /**
+     * set OPNV discount default
+     */
+    getOpnvDiscount.value = "0";
 
-    // Adding event listener
-    // car
-    getConsumptionInLiter.addEventListener('input', calcCarOpnv);
-    getDistanceInKm.addEventListener('input', calcCarOpnv);
-    getCarPriceInEuro.addEventListener('input', calcCarOpnv);
+    /*************************
+     * Adding event listener *
+     *************************/ 
+    // CAR
+    /**
+     * input listener for car Field consumption
+     */
+    getCarConsumptionInLiter.addEventListener('input', calcCarOpnv);
+    /**
+     * input listener for car Field km
+     */
+    getCarDistanceInKm.addEventListener('input', calcCarOpnv);
+    /**
+     * input listener for car Field price in EURO
+     */
+    getCarPriceLiterInEuro.addEventListener('input', calcCarOpnv);
+    /**
+     * input listener for car Field check two times
+     */
     getCarCheckTwoTimes.addEventListener('input', calcCarOpnv);
+
     // ÖPNV
-    getPriceOpnv.addEventListener('input', calcCarOpnv);
+    /**
+     * input listener for ÖONV Field price
+     */
+    getOpnvPrice.addEventListener('input', calcCarOpnv);
+    /**
+     * input listener for ÖPNV Field discount
+     */
+    getOpnvDiscount.addEventListener('input', calcCarOpnv);
+    /**
+     * input listener for ÖPNV Field check two times
+     */
+    getOpnvCheckTwoTimes.addEventListener('input', calcCarOpnv);
 }
 
+/**
+ * starting the calculator
+ */
 startCalculator();
