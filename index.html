@@ -28,24 +28,24 @@
                 <h2>Auto</h2>
                 <div>
                     <div class="formgroup">
-                        <label for="consumptionInLiter">Verbrauch in Liter je 100km</label>
+                        <label for="carConsumptionInLiter">Verbrauch in Liter je 100km</label>
                         <input type="number" name="carConsumptionInLiter" id="carConsumptionInLiter" />
                     </div>
                     <div class="formgroup">
-                        <label for="distanceInKm">Entfernung in km</label>
+                        <label for="carDistanceInKm">Entfernung in km</label>
                         <input type="number" name="carDistanceInKm" id="carDistanceInKm" />
                     </div>
                     <div class="formgroup">
-                        <label for="checkTwoTimes">Weg zurück? (x2)</label>
+                        <label for="carCheckTwoTimes">Weg zurück? (x2)</label>
                         <input type="checkbox" name="carCheckTwoTimes" id="carCheckTwoTimes" />
                     </div>
                     <div class="formgroup">
-                        <label for="priceInEuro">Preis je Liter in EURO</label>
+                        <label for="carPriceLiterInEuro">Preis je Liter in EURO</label>
                         <input type="number" name="carPriceLiterInEuro" id="carPriceLiterInEuro" />
                     </div>
                     <div class="result-wrapper">
                         <h3>Gesamtkosten</h3>
-                        <span id="carCostResult">nicht berechnet</span>
+                        <span class="hightlight" id="carCostResult">nicht berechnet</span>
                     </div>
                 </div>
             </div>
@@ -54,22 +54,22 @@
                 <h2>ÖPNV</h2>
                 <div>
                     <div class="formgroup">
-                        <label for="priceOpnv">Preis für ÖPNV-Fahrt in EURO</label>
+                        <label for="opnvPrice">Preis für ÖPNV-Fahrt in EURO</label>
                         <input type="number" name="opnvPrice" id="opnvPrice" />
                     </div>
                     <div class="formgroup">
-                        <label for="checkTwoTimes">Weg zurück? (x2)</label>
+                        <label for="opnvCheckTwoTimes">Weg zurück? (x2)</label>
                         <input type="checkbox" is name="opnvCheckTwoTimes" id="opnvCheckTwoTimes" />
                     </div>
                     <div class="formgroup">
-                        <label for="priceOpnv">Rabatt in %</label>
+                        <label for="opnvDiscount">Rabatt in %</label>
                         <input type="number" min="0" max="100" name="opnvDiscount" id="opnvDiscount" />
                         <p id="opnvDiscountWarning" class="display-none warning">Prüfe Deinen Wert!</p>
                     </div>
                 </div>
                 <div class="result-wrapper">
                     <h3>Gesamtkosten</h3>
-                    <span id="opnvCostResult">nicht berechnet</span>
+                    <span class="hightlight" id="opnvCostResult">nicht berechnet</span>
                 </div>
             </div>
             <!-- Result -->

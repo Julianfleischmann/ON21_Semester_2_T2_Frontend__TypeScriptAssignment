@@ -68,6 +68,8 @@ input[type=checkbox]:checked::before {
 .calculation-col {
     flex-grow: 6;
     padding: 1.5rem 2rem;
+    position: relative;
+    min-height: 15rem;
 }
 
 .result-col {
@@ -117,8 +119,12 @@ input[type=checkbox]:checked::before {
     color: #DC143C;
 }
 
-/* 
+.hightlight {
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
 .result-wrapper {
+    bottom: 0px;
     position: absolute;
-    bottom: 0;
-} */
+}
