@@ -86,10 +86,10 @@ export function calcCarOpnv() {
     // Updating the result Information
     if (opnvResult > carResult) {
         // Auto günstiger
-        getResultInformation.innerHTML = `Das <strong>Auto</strong> ist ${difference.toFixed(2)}€ günstiger!`;
+        getResultInformation.innerHTML = `Das <strong>Auto</strong> ist <span class="hightlight">${difference.toFixed(2)}€</span> günstiger!`;
     } else if (opnvResult < carResult) {
         // ÖPNV günstiger
-        getResultInformation.innerHTML = `Der <strong>ÖPNV</strong> ist ${difference.toFixed(2)}€ günstiger!`;
+        getResultInformation.innerHTML = `Der <strong>ÖPNV</strong> ist <span class="hightlight">${difference.toFixed(2)}€</span> günstiger!`;
     } else {
         // Beide gleich teuer
         getResultInformation.innerHTML = "Beide sind gleich günstig!";
